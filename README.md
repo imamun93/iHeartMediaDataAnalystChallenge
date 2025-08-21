@@ -3,33 +3,28 @@ B2B Marketing Revenue Insights (Sample Analysis for iHeartMedia)
 
 Explore anonymized sales & revenue data (~300k rows) to identify performance trends and provide actionable insights for iHeartMedia’s B2B marketing and sales leadership.
 
-Key Questions (from prompt)
+# Key Questions (from prompt)
 
-Which markets are stronger or weaker performers?
+## Which markets are stronger or weaker performers?
+Strongest: Los Angeles, New York, Houston, Cincinnati OH
 
-Strongest: Los Angeles, New York, Houston, Chicago
+Weakest: LaGrange, Gallup NM, Defiance, New Haven CT
 
-Weakest: Smaller regional markets (e.g., Akron, Raleigh)
+### Revenue is highly concentrated in a few big-city markets.
 
-Revenue is highly concentrated in a few big-city markets.
-
-Which products or sellers stand out?
-
+## Which products or sellers stand out?
 Products: Broadcast dominates, Podcast is emerging.
 
-Sellers: A small group disproportionately drives revenue.
+Sellers: Seller 467, 393 and 1330 combined outperform all other sellers combined.
 
-Do certain months/weeks perform better?
+## Do certain months perform better?
+Clear Q4 seasonality (holiday advertising spikes), as shown on for the revenue on January 1st..
 
-Clear Q4 seasonality (holiday advertising spikes).
 
-Local orders show more variance → tied to events.
-
-Are there products that consistently drive more revenue?
-
+## Are there products that consistently drive more revenue?
 Broadcast (stable, large volume).
 
-Podcast (smaller but fast-growing).
+Podcast and streaming(smaller but fast-growing).
 
 🤖 AI-Assisted Insights
 
@@ -45,4 +40,6 @@ Python (Pandas, Seaborn, Scikit-learn) → Data cleaning, EDA, anomaly detection
 
 Tableau Public → Interactive dashboard for executive storytelling.
 
-View the Dashboard: B2B Marketing Revenue Insights – Tableau
+View the Dashboard: B2B Marketing Revenue Insights – [Tableau](https://public.tableau.com/views/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+Also check the PowerPoint Deck attached for a simplified but detailed breakdown.
