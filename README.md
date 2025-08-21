@@ -41,5 +41,6 @@ Python (Pandas, Seaborn, Scikit-learn) → Data cleaning, EDA, anomaly detection
 Tableau Public → Interactive dashboard for executive storytelling.
 
 View the Dashboard: B2B Marketing Revenue Insights – [Tableau](https://public.tableau.com/views/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+<img width="1998" height="1598" alt="B2B Marketing   Revenue Insights – iHeartMedia (Sample Analysis)" src="https://github.com/user-attachments/assets/024e271e-6ef6-499f-9976-5a0a96350ac7" />
 
 Also check the PowerPoint Deck attached for a simplified but detailed breakdown.
