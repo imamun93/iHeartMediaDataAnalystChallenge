@@ -1,46 +1,102 @@
-B2B Marketing Revenue Insights (Sample Analysis for iHeartMedia)
-📊 Objective
+📊 B2B Marketing Revenue Insights
+Sample Analysis for iHeartMedia – Data Analyst Exercise
+🎯 Objective
 
 Explore anonymized sales & revenue data (~300k rows) to identify performance trends and provide actionable insights for iHeartMedia’s B2B marketing and sales leadership.
 
-# Key Questions (from prompt)
+The project uses both Python (EDA + AI-assisted anomaly detection) and Tableau (executive dashboards) to surface opportunities and risks.
 
-## Which markets are stronger or weaker performers?
-Strongest: Los Angeles, New York, Houston, Cincinnati OH
+❓ Key Business Questions
+1. Which markets are stronger or weaker performers?
 
-Weakest: LaGrange, Gallup NM, Defiance, New Haven CT
+Top markets: Los Angeles, New York, Houston, Cincinnati.
 
-### Revenue is highly concentrated in a few big-city markets.
+Weaker markets: LaGrange, Gallup (NM), Defiance, New Haven (CT).
 
-## Which products or sellers stand out?
-Products: Broadcast dominates, Podcast is emerging.
+✅ Revenue is highly concentrated in a few major markets.
 
-Sellers: Seller 467, 393 and 1330 combined outperform all other sellers combined.
+📈 Action: Prioritize mid-tier markets for growth potential.
 
-## Do certain months perform better?
-Clear Q4 seasonality (holiday advertising spikes), as shown on for the revenue on January 1st..
+2. Which products or sellers stand out?
 
+Products: Broadcast dominates. Podcasts & Streaming show rapid growth.
 
-## Are there products that consistently drive more revenue?
-Broadcast (stable, large volume).
+Sellers: Sellers 467, 393, 1330 drive outsized performance; some underperformers present opportunities for enablement.
 
-Podcast and streaming(smaller but fast-growing).
+📈 Action: Cross-train underperforming sellers and double down on Podcast growth.
+
+3. Do certain months perform better?
+
+Clear Q4 holiday spikes.
+
+January rollover effect → revenue carries over from prior campaigns.
+
+February dip likely reflects seasonal slowdown.
+
+📈 Action: Align marketing pushes with seasonal cycles & anticipate dips.
+
+4. Are there products that consistently drive more revenue?
+
+Broadcast: Stable, high volume.
+
+Podcast + Streaming: Smaller base but strong growth trajectory.
+
+📈 Action: Maintain Broadcast dominance while nurturing Podcast/Streaming.
 
 🤖 AI-Assisted Insights
 
-Anomaly detection (Isolation Forest) identified outlier deals, particularly in Local order types, where revenue fluctuates more due to ad hoc buys and events.
+Anomaly detection (Isolation Forest) flagged unusual deals.
 
-AI surfaced patterns that traditional group-bys might miss, highlighting potential risks and opportunities.
+Most outliers appeared in Local Order Types, which makes sense—local deals have more variance due to ad hoc buys/events.
 
-AI here was used as a “second set of eyes” to confirm and extend human analysis.
+✅ AI acts as a “second set of eyes,” surfacing potential risks and overlooked opportunities.
 
-🛠️ Tools Used
+📊 Tableau Dashboard
 
-Python (Pandas, Seaborn, Scikit-learn) → Data cleaning, EDA, anomaly detection.
+Interactive dashboard with drilldowns for:
 
-Tableau Public → Interactive dashboard for executive storytelling.
+Market performance
 
-View the Dashboard: B2B Marketing Revenue Insights – [Tableau](https://public.tableau.com/views/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-<img width="1998" height="1598" alt="B2B Marketing   Revenue Insights – iHeartMedia (Sample Analysis)" src="https://github.com/user-attachments/assets/024e271e-6ef6-499f-9976-5a0a96350ac7" />
+Product mix
 
-Also check the PowerPoint Deck attached for a simplified but detailed breakdown.
+Seller revenue
+
+Seasonal trends
+
+🔗 [View Dashboard on Tableau Public](https://public.tableau.com/views/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+Screenshot of Dashboard <img width="1998" height="1598" alt="B2B Marketing   Revenue Insights – iHeartMedia (Sample Analysis)" src="https://github.com/user-attachments/assets/d743e8cb-257c-41ff-9f6b-83839c90644e" />
+
+
+📘 Data & Methods
+Data Cleaning
+
+Dropped 2.77% rows with missing critical values (Markets, Products, Sales Order IDs).
+
+Final dataset: 291,685 rows (~97% retained).
+
+Python EDA
+
+Grouped and ranked by Markets, Products, Sellers, Order Types.
+
+Visualized top/bottom performers.
+
+Applied AI anomaly detection to flag revenue outliers.
+
+Tableau
+
+Created clean, interactive dashboard for executives.
+
+Breakdowns by Market, Product, Order Type, Advertiser.
+
+
+
+🚀 Next Steps / Recommendations
+
+Standardize & clean data inputs (esp. “Unknown” categories).
+
+Double down on Podcast/Streaming as emerging revenue drivers.
+
+Strengthen mid-tier market development to reduce over-reliance on top metros.
+
+Scale AI-assisted anomaly detection into sales ops workflows for proactive opportunity spotting.
