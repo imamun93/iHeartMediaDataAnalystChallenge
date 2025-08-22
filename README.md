@@ -1,102 +1,83 @@
-📊 B2B Marketing Revenue Insights
-Sample Analysis for iHeartMedia – Data Analyst Exercise
-🎯 Objective
+# 📊 B2B Marketing Revenue Insights  
+*(Sample Analysis for iHeartMedia)*  
 
-Explore anonymized sales & revenue data (~300k rows) to identify performance trends and provide actionable insights for iHeartMedia’s B2B marketing and sales leadership.
+---
 
-The project uses both Python (EDA + AI-assisted anomaly detection) and Tableau (executive dashboards) to surface opportunities and risks.
+## 🎯 Objective  
+Explore anonymized sales & revenue data (~300k rows) to identify performance trends and provide actionable insights for iHeartMedia’s B2B marketing and sales leadership.  
 
-❓ Key Business Questions
-1. Which markets are stronger or weaker performers?
+---
 
-Top markets: Los Angeles, New York, Houston, Cincinnati.
+## ❓ Key Business Questions  
 
-Weaker markets: LaGrange, Gallup (NM), Defiance, New Haven (CT).
+### 1. Which markets are stronger or weaker performers?  
+Revenue is highly concentrated in a few big-city markets.  
+- **Strongest:** Los Angeles, New York, Houston, Cincinnati  
+- **Weakest:** LaGrange, Gallup NM, Defiance, New Haven CT  
 
-✅ Revenue is highly concentrated in a few major markets.
+📷 **Visual:**  
+![Top 5 Markets](Assets/top_5_market_by_order_type.png)  
 
-📈 Action: Prioritize mid-tier markets for growth potential.
+---
 
-2. Which products or sellers stand out?
+### 2. Which products or sellers stand out?  
+- **Products:** Broadcast dominates, Podcast is emerging.  
+- **Sellers:** Seller 467, 393, and 1330 together outperform nearly all others combined.  
 
-Products: Broadcast dominates. Podcasts & Streaming show rapid growth.
+📷 **Visuals:**  
+![Product Revenue Breakdown](Assets/top_product_by_rev.png)  
+![Top Sellers](Assets/top_sellers.png)  
 
-Sellers: Sellers 467, 393, 1330 drive outsized performance; some underperformers present opportunities for enablement.
+---
 
-📈 Action: Cross-train underperforming sellers and double down on Podcast growth.
+### 3. Do certain months perform better?  
+Clear seasonality in Q4 (holiday advertising spikes), followed by an early-year dip.  
 
-3. Do certain months perform better?
+📷 **Visual:**  
+![Monthly Revenue Trend](Assets/monthly_trend.png)  
 
-Clear Q4 holiday spikes.
+---
 
-January rollover effect → revenue carries over from prior campaigns.
+### 4. Are there products that consistently drive more revenue?  
+Broadcast delivers consistent, large-scale revenue. Podcast & Streaming are smaller but growing quickly.  
 
-February dip likely reflects seasonal slowdown.
+📷 **Visual:**  
+![Products by Order Type](Assets/top_5_product_order_type.png)  
 
-📈 Action: Align marketing pushes with seasonal cycles & anticipate dips.
+---
 
-4. Are there products that consistently drive more revenue?
+## 🤖 AI-Assisted Insights  
+AI anomaly detection (Isolation Forest) flagged unusually high/low revenue deals. Most anomalies were concentrated in **Local orders**, which makes sense since local campaigns have more variability and ad-hoc spending patterns.  
 
-Broadcast: Stable, high volume.
+📷 **Visual:**  
+![AI Outlier Boxplot](Assets/ai_assist_outlier.png)  
 
-Podcast + Streaming: Smaller base but strong growth trajectory.
+---
 
-📈 Action: Maintain Broadcast dominance while nurturing Podcast/Streaming.
+## 📊 Tableau Dashboard  
+The analysis is complemented with an **interactive Tableau dashboard** for executive storytelling.  
+👉 [View the Dashboard](https://public.tableau.com/views/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis)  
 
-🤖 AI-Assisted Insights
+📷 **Visual:**  
+![Tableau Dashboard Screenshot](Assets/tableau_dashboard_image.png)  
 
-Anomaly detection (Isolation Forest) flagged unusual deals.
+---
 
-Most outliers appeared in Local Order Types, which makes sense—local deals have more variance due to ad hoc buys/events.
+## 📘 Data & Methods  
 
-✅ AI acts as a “second set of eyes,” surfacing potential risks and overlooked opportunities.
+- **Data Cleaning:** Dropped ~2.77% rows due to missing/invalid values. Retained ~97% of dataset.  
+- **Tools Used:**  
+  - Python (Pandas, Seaborn, Scikit-learn) → Data cleaning, EDA, anomaly detection  
+  - Tableau Public → Interactive executive dashboard  
+ 
 
-📊 Tableau Dashboard
+---
 
-Interactive dashboard with drilldowns for:
+## 🚀 Next Steps  
+- Deep dive into mid-tier markets with steady but lower revenue.  
+- Explore why certain advertisers (e.g., Advertiser 179 at MMP level) dramatically outperform others.  
+- Improve National category by properly categorizing “Unknown” to unlock hidden revenue.  
+- Expand dataset (multi-year) to validate seasonal trends.  
 
-Market performance
+---
 
-Product mix
-
-Seller revenue
-
-Seasonal trends
-
-🔗 [View Dashboard on Tableau Public](https://public.tableau.com/views/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis/B2BMarketingRevenueInsightsiHeartMediaSampleAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-
-Screenshot of Dashboard <img width="1998" height="1598" alt="B2B Marketing   Revenue Insights – iHeartMedia (Sample Analysis)" src="https://github.com/user-attachments/assets/d743e8cb-257c-41ff-9f6b-83839c90644e" />
-
-
-📘 Data & Methods
-Data Cleaning
-
-Dropped 2.77% rows with missing critical values (Markets, Products, Sales Order IDs).
-
-Final dataset: 291,685 rows (~97% retained).
-
-Python EDA
-
-Grouped and ranked by Markets, Products, Sellers, Order Types.
-
-Visualized top/bottom performers.
-
-Applied AI anomaly detection to flag revenue outliers.
-
-Tableau
-
-Created clean, interactive dashboard for executives.
-
-Breakdowns by Market, Product, Order Type, Advertiser.
-
-
-
-🚀 Next Steps / Recommendations
-
-Standardize & clean data inputs (esp. “Unknown” categories).
-
-Double down on Podcast/Streaming as emerging revenue drivers.
-
-Strengthen mid-tier market development to reduce over-reliance on top metros.
-
-Scale AI-assisted anomaly detection into sales ops workflows for proactive opportunity spotting.
